@@ -1,0 +1,19 @@
+.footer-title {
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    line-height: 40px;
+}
+
+.footer-logo {
+    width: 30px;
+    margin-right: 10px;
+    color: white;
+    background-color: white;
+    border-radius: 50%;
+}
+
+footer {
+    height: 40px;
+    background-color: rgba(40,40,40,0.8);
+}

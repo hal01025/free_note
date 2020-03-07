@@ -1,0 +1,104 @@
+.slider {
+    margin-top: 20px;
+    height: 50vw;
+    position: relative;
+}
+
+.slider-container {
+    height: 50vw;
+    width: 500vw;
+    position: absolute;
+}
+
+.slider-outer {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.slider-inner1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slider-inner2 {
+    position: absolute;
+    top: 0;
+    left: 100vw;
+}
+
+.slider-inner3 {
+    position: absolute;
+    top: 0;
+    left: 200vw;
+}
+
+.slider-inner4 {
+    position: absolute;
+    top: 0;
+    left: 300vw;
+}
+
+.slider-inner5 {
+    position: absolute;
+    top: 0;
+    left: 400vw;
+}
+
+.slider-wrapper {
+    position: relative;
+    width: 100vw;
+    height: 50vw;
+}
+
+.slider-ul li {
+    float: left;
+    opacity: 1;
+}
+
+.slider-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.image-description {
+    position: absolute;
+    left: 10%;
+    bottom: 10%;
+    z-index: 10;
+}
+
+.image-title {
+    font-size: 52px;
+    font-weight: 600;
+}
+
+.image-date {
+    font-size: 20px;
+}
+
+.indicator {
+    display: inline-block;
+}
+
+.indicator a{
+    line-height: 10px;
+}
+
+.slide-indicator {
+    position: absolute;
+    bottom: 10%;
+    left: 85vw;
+    z-index: 100;
+    height: 30px;
+    padding: 0 5px;
+    border-radius: 3px;
+    background-color: rgba(255,255,255,0.3);
+}
+
+.dot {
+    font-size: 0.6em;
+    color: black;
+}

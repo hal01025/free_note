@@ -1,0 +1,83 @@
+header {
+    height: 120px;
+}
+
+.header-outer {
+    position: fixed;
+    background-color: rgba(255,255,255, 0.5);
+    z-index: 100;
+    width: 100vw;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    width: 70vw;
+    margin: 0 auto;
+}
+
+.header-title h1 {
+    line-height: 120px;
+    letter-spacing: 8px;
+    font-weight: 800;
+}
+
+.header-logo {
+    width: 50px;
+    margin-right: 20px;
+}
+
+.menu-list {
+    line-height: 120px;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.header-menu a {
+    padding-left: 15px;
+    font-size: 16px;
+    line-height: 120px;
+}
+
+.humberger-btn {
+    display: none;
+}
+
+@media (max-width: 1000px) {
+    .humberger-btn {
+        display: block;
+    }
+    
+    .humberger-btn {
+        border: 0;
+        background-color: rgba(0,0,0,0);
+    }
+    
+    .header-menu {
+        display: none;
+    }
+    
+    button {
+        line-height: 120px;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        height: 80px;
+    }
+    
+    .header-title h1 {
+        font-size: 28px;
+        letter-spacing: 5px;
+        line-height: 80px;
+    }
+    
+    .header-logo {
+        width: 40px;
+    }
+    
+    button {
+        line-height: 80px;
+    }
+}

@@ -1,0 +1,58 @@
+.main-container {
+    margin-top: 30px;
+    height: 95vw;
+    position: relative;
+}
+
+.tag {
+    position: absolute;
+    z-index:10;
+    left: 13vw;
+    width: 4vw;
+    height: 10vw;
+    background-color: red;
+    border: 2px solid rgba(40,40,40,0.4);
+    border-radius: 3px;
+    opacity: 0.8;
+    filter: drop-shadow(4px 4px 4px grey);
+}
+
+.note {
+    position: absolute;
+    width: 80vw;
+    height: 80vw;
+    top: 4vw;
+    left: 10vw;
+    border-radius: 5px;
+    border: 1px solid rgba(40,40,40,0.3);
+    filter: drop-shadow(4px 4px 4px grey);
+    background-color: white;
+}
+
+.note-wrapper {
+    width: 70vw;
+    margin: 0 auto;
+    margin-top: 8vw;
+}
+
+.tag-2 {
+    left: 20vw;
+    background-color: green;
+    z-index: 0;
+}
+
+.tag-3 {
+    left: 27vw;
+    background-color: blue;
+    z-index: 0;
+}
+
+.tag-4 {
+    left: 34vw;
+    background-color: yellow;
+    z-index: 0;
+}
+
+.note-1 {
+    z-index: 5;
+}

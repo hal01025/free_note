@@ -1,0 +1,19 @@
+body {
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, a, ul, li, p {
+    padding: 0;
+    margin: 0;
+    letter-spacing: 2px;
+    font-family: 'Oswald', sans-serif;
+    list-style: none;
+    color: black;
+    opacity: 0.8;
+}
+
+a:hover {
+    text-decoration: none;
+    cursor: important;
+    color: black;
+}
