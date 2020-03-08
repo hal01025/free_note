@@ -4,7 +4,7 @@ let currentSlide = 1;
 const slideScroll = (selectedSlide) => {
   const duration = Math.abs(selectedSlide - currentSlide)*800;
   
-  $('.slider-container').animate({
+  $('.slider-container').stop().animate({
     left: `${(1 - selectedSlide)*100}vw`,
   }, duration);
   currentSlide = selectedSlide;

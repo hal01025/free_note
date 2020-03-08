@@ -4,15 +4,16 @@ header {
 
 .header-outer {
     position: fixed;
-    background-color: rgba(255,255,255, 0.5);
+    background-color: rgba(255,255,255, 0.8);
     z-index: 100;
     width: 100vw;
+    height: 120px;
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
-    width: 70vw;
+    width: 90vw;
     margin: 0 auto;
 }
 
@@ -43,6 +44,9 @@ header {
     display: none;
 }
 
+
+
+
 @media (max-width: 1000px) {
     .humberger-btn {
         display: block;
@@ -64,6 +68,10 @@ header {
 
 @media (max-width: 600px) {
     header {
+        height: 80px;
+    }
+    
+    .header-outer {
         height: 80px;
     }
     

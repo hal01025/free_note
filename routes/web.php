@@ -15,9 +15,10 @@ Route::get('/', function () {
     return view('auth.register');
 });
 
-Route::get('my-page', function() {
-   return view('my-page.my-page'); 
+Route::group(['middleware' => ['auth']], function() {
+    Route::get('my-page', 'TopController@index')->name('my-page');
 });
+
 
 Route::get('auth.login', function() {return view('auth.login');})->name('auth.login');
 
@@ -28,3 +29,14 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 Route::post('login', 'Auth\LoginController@login')->name('login.post');
 Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
+
+
+Route::group(['middleware' => ['auth']], function() {
+    Route::resource('notes', 'NotesController');
+    Route::group(['prefix' => 'my-page/{id}'], function() {
+       Route::get('notes', 'NotesController@show')->name('notes.show');
+       Route::get('notes', 'NotesController@create')->name('notes.create');
+       Route::post('notes', 'NotesController@store')->name('notes.store');
+   });
+
+});

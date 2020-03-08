@@ -1,12 +1,11 @@
 .slider {
-    margin-top: 20px;
     height: 50vw;
     position: relative;
 }
 
 .slider-container {
     height: 50vw;
-    width: 500vw;
+    width: 100vw;
     position: absolute;
 }
 
@@ -101,4 +100,10 @@
 .dot {
     font-size: 0.6em;
     color: black;
+}
+
+@media (max-width: 600px) {
+    .slide-indicator {
+        display: none;
+    }
 }

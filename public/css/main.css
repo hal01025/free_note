@@ -1,7 +1,11 @@
-.main-container {
+.main-outer {
     margin-top: 30px;
-    height: 95vw;
-    position: relative;
+    height: 130vw;
+}
+
+.main-container {
+    position:relative;
+    height: auto;
 }
 
 .tag {
@@ -20,7 +24,7 @@
 .note {
     position: absolute;
     width: 80vw;
-    height: 80vw;
+    height: 120vw;
     top: 4vw;
     left: 10vw;
     border-radius: 5px;
@@ -55,4 +59,57 @@
 
 .note-1 {
     z-index: 5;
+}
+
+.note h2, .note p {
+    padding-bottom: 12px;
+    padding-top: 12px;
+    border-bottom: 1px dashed black;
+}
+
+.note-list-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.fixed-tag {
+    width: 30vw;
+    height: 30vw;
+    margin-top: 10px;
+}
+
+.fixed-tag-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.fixed-tag-wrapper p {
+    border-style: none;    
+}
+
+.fixed-tag-image {
+    position: absolute;
+    z-index: 50;
+    width: 100%;
+    height: 100%;
+}
+
+.fixed-tag-para {
+    position: absolute;
+    z-index: 100;
+    top: 15%;
+    left: 10%;
+    width: 80%;
+    height: 70%;
+}
+
+.background-decoration {
+    position: absolute;
+    top: 25vw;
+    width: 100vw;
+    height: 105vw;
+    background-color: black;
+    z-index: 0;
 }

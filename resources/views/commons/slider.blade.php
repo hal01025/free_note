@@ -7,7 +7,7 @@
                         <h3 class="image-title"></h3>
                         <p class="image-date">post_date: { date }</p>
                     </div>
-                    <img src="images/blank-792125_1920.jpg" class="slider-image"></img>
+                    <img src="{{ secure_asset('images/blank-792125_1920.jpg') }}" class="slider-image"></img>
                 </div>
             </div>
             <div class="slider-inner2">    
@@ -16,7 +16,7 @@
                         <h3 class="image-title"></h3>
                         <p class="image-date">post_date: { date }</p>
                     </div>
-                    <img src="images/writing-1149962_1920.jpg" class="slider-image"></img>
+                    <img src="{{ secure_asset('images/writing-1149962_1920.jpg') }}" class="slider-image"></img>
                 </div>
             </div>
             <div class="slider-inner3">    
@@ -25,7 +25,7 @@
                         <h3 class="image-title"></h3>
                         <p class="image-date">post_date: { date }</p>
                     </div>
-                    <img src="images/chalkboard-1337809_1920.jpg" class="slider-image"></img>
+                    <img src="{{ secure_asset('images/filler-4840419_1920.jpg') }}" class="slider-image"></img>
                 </div>
             </div>
             <div class="slider-inner4">    
@@ -34,7 +34,7 @@
                         <h3 class="image-title"></h3>
                         <p class="image-date">post_date: { date }</p>
                     </div>
-                    <img src="images/chalkboard-1337809_1920.jpg" class="slider-image"></img>
+                    <img src="{{ secure_asset('images/old-1130742_1920.jpg') }}" class="slider-image"></img>
                 </div>
             </div>
             <div class="slider-inner5">    
@@ -43,7 +43,7 @@
                         <h3 class="image-title"></h3>
                         <p class="image-date">post_date: { date }</p>
                     </div>
-                    <img src="images/chalkboard-1337809_1920.jpg" class="slider-image"></img>
+                    <img src="{{ secure_asset('images/notebook-1587525_1920.jpg') }}" class="slider-image"></img>
                 </div>
             </div>
         </div>

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddTitleGenreToNotesTable extends Migration
+class AddGenreIdToNotesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,9 +14,9 @@ class AddTitleGenreToNotesTable extends Migration
     public function up()
     {
         Schema::table('notes', function (Blueprint $table) {
-            $table->string('title');
-            $table->string('genre');
-            $table->string('description');
+            $table->integer('genre_id')->unsigned()->index();
+            
+            $table->foreign('genre_id')->references('id')->on('genres');
         });
     }
 
@@ -28,9 +28,7 @@ class AddTitleGenreToNotesTable extends Migration
     public function down()
     {
         Schema::table('notes', function (Blueprint $table) {
-            $table->dropColumn('title');
-            $table->dropColumn('genre');
-            $table->dropColumn('description');
+            dropColumn('genre_id');
         });
     }
 }

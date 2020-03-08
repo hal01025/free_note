@@ -1,0 +1,87 @@
+nav {
+    height: 70px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+.nav-outer {
+    background-color: rgba(255,255,255, 0.8);
+    z-index: 100;
+    width: 100vw;
+    height: 70px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    width: 70vw;
+    height: 68px;
+    margin: 0 auto;
+}
+
+.nav-title h2 {
+    line-height: 68px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 24px;
+    padding-right: 25px;
+    border-right: 1px solid black;
+}
+
+.nav-menu-list {
+    line-height: 70px;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.nav-menu a {
+    padding-left: 15px;
+    font-size: 16px;
+    line-height: 70px;
+}
+
+.nav-humberger-btn {
+    display: none;
+}
+
+
+
+
+@media (max-width: 1000px) {
+    .nav-humberger-btn {
+        display: block;
+    }
+    
+    .nav-humberger-btn {
+        border: 0;
+        background-color: rgba(0,0,0,0);
+    }
+    
+    .nav-menu {
+        display: none;
+    }
+    
+    .nav-humberger-btn {
+        line-height: 68px;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        height: 40px;
+    }
+    
+    .nav-container {
+        height: 38px;
+    }
+    
+    .nav-title h2 {
+        font-size: 16px;
+        letter-spacing: 1px;
+        line-height: 38px;
+    }
+    
+    .nav-humberger-btn {
+        line-height: 34px;
+    }
+}

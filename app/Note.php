@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Note extends Model
 {
-    protected $fillable = ['article', 'user_id'];
+    protected $fillable = ['article', 'user_id', 'genre_id', 'title', 'description'];
     
     public function user() 
     {
@@ -16,5 +16,10 @@ class Note extends Model
     public function privacy() 
     {
         return $this->belongsToMany(User::class);
+    }
+    
+    public function genre() 
+    {
+        return $this->belongsTo(Genre::class);
     }
 }

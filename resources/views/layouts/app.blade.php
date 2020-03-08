@@ -8,11 +8,12 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <!--Google-Fonts css-->
         <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/header.css">
-        <link rel="stylesheet" href="css/slider.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/footer.css">
+        <link rel="stylesheet" href="{{ secure_asset('css/normalize.css') }}">
+        <link rel="stylesheet" href="{{ secure_asset('css/header.css') }}">
+        <link rel="stylesheet" href="{{ secure_asset('css/slider.css') }}">
+        <link rel="stylesheet" href="{{ secure_asset('css/navigation.css') }}">
+        <link rel="stylesheet" href="{{ secure_asset('css/main.css') }}">
+        <link rel="stylesheet" href="{{ secure_asset('css/footer.css') }}">
         <title>Free_note</title>
     </head>
     
@@ -30,7 +31,8 @@
         <!--Fontawesome JS-->
         <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
         
-        <script src="js/slider.js"></script>
+        <script src="{{ secure_asset('js/slider.js') }}"></script>
+        <script src="{{ secure_asset('js/main.js') }}"></script>
         
     </body>
 </html>
