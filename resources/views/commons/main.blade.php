@@ -49,9 +49,11 @@
       <div class="note note-2">
         <div class="note-wrapper">
           <h2 class="">Note_List</h2>
-          
+          <p>各ジャンルごとにnoteがまとめられています。</p>
+          <p>以下のジャンルから1つ選択すると、そのnote一覧が確認できます。</p>
           @foreach($genres as $genre)
-            <p><a href="{{ route('notes.show', ['id' => $genre->id ]) }}">{{ $genre->id }}. {{ $genre->genre }}</a></p>
+            <h3><a href="{{ route('notes.show', ['id' => $genre->id ]) }}">{{ $genre->id }}. {{ $genre->genre }} <span>({{ $genre->belonging_notes()->count() }})</span></a></h3>
+            <p class="">詳細: {{ $genre->description }}</p>
           @endforeach
           
         </div>
@@ -60,8 +62,11 @@
       <div class="note note-3">
         <div class="note-wrapper">
           <h2 class="">New_Note</h2>
+          <p>各ジャンルごとにnoteの作成ができます。</p>
+          <p>以下のジャンルから1つを選択してnoteを作成して下さい。</p>
           @foreach($genres as $genre)
-          <p><a href="{{ route('notes.create', ['id' => $genre->id, ]) }}">1. create_{{ $genre->genre }}_note</a></p>
+          <h3><a href="{{ route('notes.create', ['id' => $genre->id, ]) }}">{{ $genre->id }}. {{ $genre->genre }}_note</a></h3>
+          <p class="">詳細: {{ $genre->description }}</p>
         @endforeach
         </div>
       </div>

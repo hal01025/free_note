@@ -22,4 +22,9 @@ class Note extends Model
     {
         return $this->belongsTo(Genre::class);
     }
+    
+    public function photos() 
+    {
+        return $this->hasMany(Photo::class);
+    }
 }

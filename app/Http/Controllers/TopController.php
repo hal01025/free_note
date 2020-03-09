@@ -14,6 +14,6 @@ class TopController extends Controller
     {
         $genres = Genre::all();
         
-        return view('my-page.my-page', ['genres' => $genres, ]);
+        return view('my-page.my-page', ['genres' => $genres]);
     }
 }

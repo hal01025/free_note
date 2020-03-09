@@ -16,11 +16,11 @@ class CreatePhotosTable extends Migration
         Schema::create('photos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('photos_url')->nullable();
-            $table->integer('notes_id')->unsigned()->index();
+            $table->integer('note_id')->unsigned()->index();
             $table->string('photo_title')->nullable();
             $table->timestamps();
             
-            $table->foreign('notes_id')->references('id')->on('notes');
+            $table->foreign('note_id')->references('id')->on('notes')->onDelete('cascade');
         });
     }
 

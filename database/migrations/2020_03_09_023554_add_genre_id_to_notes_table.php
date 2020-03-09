@@ -16,7 +16,7 @@ class AddGenreIdToNotesTable extends Migration
         Schema::table('notes', function (Blueprint $table) {
             $table->integer('genre_id')->unsigned()->index();
             
-            $table->foreign('genre_id')->references('id')->on('genres');
+            $table->foreign('genre_id')->references('id')->on('genres')->onDelete('cascade');
         });
     }
 
@@ -28,7 +28,7 @@ class AddGenreIdToNotesTable extends Migration
     public function down()
     {
         Schema::table('notes', function (Blueprint $table) {
-            dropColumn('genre_id');
+            $table->dropColumn('genre_id');
         });
     }
 }

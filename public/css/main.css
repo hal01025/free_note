@@ -14,7 +14,7 @@
     left: 13vw;
     width: 4vw;
     height: 10vw;
-    background-color: red;
+    background-color: rgb(240,0,0);
     border: 2px solid rgba(40,40,40,0.4);
     border-radius: 3px;
     opacity: 0.8;
@@ -41,19 +41,19 @@
 
 .tag-2 {
     left: 20vw;
-    background-color: green;
+    background-color: rgb(0,224,26);
     z-index: 0;
 }
 
 .tag-3 {
     left: 27vw;
-    background-color: blue;
+    background-color: rgb(23,61,255);
     z-index: 0;
 }
 
 .tag-4 {
     left: 34vw;
-    background-color: yellow;
+    background-color: rgb(250,241,0);
     z-index: 0;
 }
 
@@ -61,7 +61,7 @@
     z-index: 5;
 }
 
-.note h2, .note p {
+.note h2, .note h3, .note p {
     padding-bottom: 12px;
     padding-top: 12px;
     border-bottom: 1px dashed black;

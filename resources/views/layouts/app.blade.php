@@ -14,6 +14,8 @@
         <link rel="stylesheet" href="{{ secure_asset('css/navigation.css') }}">
         <link rel="stylesheet" href="{{ secure_asset('css/main.css') }}">
         <link rel="stylesheet" href="{{ secure_asset('css/footer.css') }}">
+        <!--Dropzone-->
+        <link rel="stylesheet" href="{{ secure_asset('css/dropzone/dropzone.css') }}" type="text/css">
         <title>Free_note</title>
     </head>
     
@@ -33,6 +35,17 @@
         
         <script src="{{ secure_asset('js/slider.js') }}"></script>
         <script src="{{ secure_asset('js/main.js') }}"></script>
+        
+        <script src="{{ secure_asset('js/dropzone.js') }}"></script>   
+        
+        <script type="text/javascript">
+            Dropzone.options.imageUpload = {
+            dictDefaultMessage: 'アップロードするファイルをここへドロップしてください',
+            acceptedFiles: '.jpg, .jpeg',
+            maxFilesize: 5 // 5MBまで
+        }
+        </script>
+
         
     </body>
 </html>
