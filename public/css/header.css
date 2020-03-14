@@ -1,13 +1,12 @@
 header {
-    height: 120px;
+    position: relative;
+
 }
 
 .header-outer {
-    position: fixed;
-    background-color: rgba(255,255,255, 0.8);
+    position: absolute;
     z-index: 100;
     width: 100vw;
-    height: 120px;
 }
 
 .header-container {
@@ -21,6 +20,7 @@ header {
     line-height: 120px;
     letter-spacing: 8px;
     font-weight: 800;
+    color: white;
 }
 
 .header-logo {
@@ -34,10 +34,21 @@ header {
     font-size: 14px;
 }
 
+.header-menu {
+    display: block;
+}
+
 .header-menu a {
     padding-left: 15px;
     font-size: 16px;
     line-height: 120px;
+    opacity: 1;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.header-menu li, .header-menu ul {
+    opacity: 1;
 }
 
 .humberger-btn {
@@ -47,18 +58,47 @@ header {
 
 
 
-@media (max-width: 1000px) {
+@media (max-width: 767px) {
     .humberger-btn {
         display: block;
+        color: white;
     }
     
     .humberger-btn {
         border: 0;
+        color: white;
         background-color: rgba(0,0,0,0);
+        height: 120px;
+    }
+    
+    .close {
+        display: block;
+        display: none;
+        position: absolute;
+        right: 10px;
+        z-index: 100;
+        opacity: 0.8;
     }
     
     .header-menu {
         display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: black;
+        padding: 20px;
+        padding-top: 80px;
+    }
+    
+    .header-menu a {
+        line-height: 30px;
+        padding: 0;
+        font-size: 12px;
+    }
+    
+    .menu-list {
+        display: block;
+        line-height: 30px;
     }
     
     button {
@@ -67,10 +107,6 @@ header {
 }
 
 @media (max-width: 600px) {
-    header {
-        height: 80px;
-    }
-    
     .header-outer {
         height: 80px;
     }
@@ -83,6 +119,10 @@ header {
     
     .header-logo {
         width: 40px;
+    }
+    
+    .humberger-btn {
+        height: 80px;
     }
     
     button {

@@ -31,4 +31,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(Note::class);
     }
+    
+    public function public_notes() 
+    {
+        return $this->belongsToMany(Note::class, 'privacy_note', 'user_id', 'privacy_id')->withTimestamps();
+    }
 }

@@ -13,9 +13,9 @@ class Note extends Model
         return $this->belongsTo(User::class);
     }
     
-    public function privacy() 
+    public function publication() 
     {
-        return $this->belongsToMany(User::class);
+        return $this->belongsToMany(User::class, 'privacy_note', 'privacy_id', 'user_id')->withTimestamps();
     }
     
     public function genre() 
@@ -26,5 +26,24 @@ class Note extends Model
     public function photos() 
     {
         return $this->hasMany(Photo::class);
+    }
+    
+    public function share($userId) 
+    {
+        $this->publication()->attach($userId);
+        
+        return true;
+    }
+    
+    public function protect($userId)
+    {
+        $this->publication()->detach($userId);
+        
+        return true;
+    }
+    
+    public function is_shared($userId)
+    {
+        return $this->publication()->where('user_id', $userId)->exists();
     }
 }

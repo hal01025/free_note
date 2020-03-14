@@ -15,9 +15,8 @@ $red.on('click', () => {
     $tag.css({
         'z-index': 0,
     });
-    $note.css({
-        'z-index': 0,
-    });
+    $note.hide();
+    $red_note.show();
     $red_note.css({
         'z-index': 5,
     });
@@ -30,9 +29,8 @@ $green.on('click', () => {
     $tag.css({
         'z-index': 0,
     });
-    $note.css({
-        'z-index': 0,
-    });
+    $note.hide();
+    $green_note.show();
     $green_note.css({
         'z-index': 5,
     });
@@ -45,9 +43,8 @@ $blue.on('click', () => {
     $tag.css({
         'z-index': 0,
     });
-    $note.css({
-        'z-index': 0,
-    });
+    $note.hide();
+    $blue_note.show();
     $blue_note.css({
         'z-index': 5,
     });
@@ -60,9 +57,8 @@ $yellow.on('click', () => {
     $tag.css({
         'z-index': 0,
     });
-    $note.css({
-        'z-index': 0,
-    });
+    $note.hide();
+    $yellow_note.show();
     $yellow_note.css({
         'z-index': 5,
     });

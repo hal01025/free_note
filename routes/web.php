@@ -33,11 +33,14 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('notes', 'NotesController');
-    Route::resource('note_details', 'NoteDetailsController')->only(['show', '']);
+    Route::post('search', 'SearchController@index');
+    Route::resource('note_details', 'NoteDetailsController', ['only' => ['show']]);
     Route::group(['prefix' => 'my-page/{id}'], function() {
        Route::get('notes', 'NotesController@show')->name('notes.show');
        Route::get('notes', 'NotesController@create')->name('notes.create');
        Route::post('notes', 'NotesController@store')->name('notes.store');
+       Route::post('share', 'ShareController@store')->name('notes.share');
+       Route::delete('protect', 'ShareController@destroy')->name('notes.protect');
    });
     
 });

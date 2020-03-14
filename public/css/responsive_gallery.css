@@ -1,0 +1,27 @@
+.responsive-container {
+    display: none;
+    padding-top: 30px;
+    background-image: url(https://storage-hal2.s3-ap-northeast-1.amazonaws.com/photos/paper-1074131_1920.jpg);
+}
+
+.responsive-gallery {
+    padding-bottom: 15px;
+}
+
+.photo-gallery-title {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: rgb(61,61,61);
+}
+
+.responsive-photo-container {
+    width: 80vw;
+    height: 91vw;
+    margin-top: 5px;
+}
+
+@media(max-width: 767px) {
+    .responsive-container {
+        display: block;
+    }
+}

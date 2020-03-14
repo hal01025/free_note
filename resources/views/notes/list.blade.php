@@ -1,16 +1,30 @@
 @extends('layouts.app')
 @section('content')
 
+<head>
+    <link rel="stylesheet" href="{{ secure_asset('css/notes/list.css') }}">
+</head>
 
-<div class="container">
-    <h2 class="mt-3 mb-3">{{ $genre->genre }}</h2>
-    @foreach($notes as $note)
-    <div class="">
-        <h3 class="mt-2">Title: {{ $note->title }}</h3>
-        <p class="mb-3">description: {{ $note->description }}</p>
-        <div height="150" width="150"><a href="{{ route('note_details.show', $note->id) }}" class="">link</a></div>
-    </div>    
-    @endforeach
+@include('commons.image-gallery')
+<div class="main-container row">
+  <div class="main-wrapper col-md-8 offset-md-2">
+    <div class="note-container">
+      <div class="note">
+        <div class="note-wrapper">
+          <div class="container">  
+            <h2 class="mt-3 mb-3">{{ $genre->genre }}</h2>
+            @foreach($notes as $note)
+              <h3 class="mt-2">Title: {{ $note->title }}</h3>
+              <p class="mb-3">description: {{ $note->description }}</p>
+              <a href="{{ route('note_details.show', $note->id) }}" class=""><div class="link-tag"><p>link</p></div></a>
+            @endforeach
+          </div>
+          <div class="pagination-wrapper">
+            <div class="pagination-box">{{ $notes->links('pagination::bootstrap-4') }}</div>
+          </div>
+        </div>
+      </div>
+     </div>
+    </div>
 </div>
-
 @endsection

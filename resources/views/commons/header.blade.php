@@ -2,11 +2,16 @@
   <div class="header-outer">
     <div class="header-container">
       <div class="header-title">
-          <h1><img src="{{ secure_asset('images/icon-1970472_1280.png') }}" class="header-logo">Free_note</h1>
+          <h1><img src="{{ secure_asset('https://storage-hal2.s3.ap-northeast-1.amazonaws.com/photos/header_image.0.png') }}" class="header-logo">Free_note</h1>
       </div>
-      <div class="humberger-btn-container">
+      <div class="humberger-btn-container open">
           <button class="humberger-btn">
               <i class="fas fa-bars"></i>
+          </button>
+      </div>
+      <div class="humberger-btn-container close">
+          <button class="humberger-btn">
+              <i class="fas fa-window-close"></i>
           </button>
       </div>
       @if(!Auth::check())

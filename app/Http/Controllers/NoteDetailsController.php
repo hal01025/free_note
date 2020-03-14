@@ -9,83 +9,26 @@ use App\Photo;
 
 class NoteDetailsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         $note = Note::find($id);
-        $photos = $note->photos()->get();
-
+        //dd($note);
+        if($note->photos()->exists())
+        {
+            $photos = $note->photos()->get();
+            $photo_array = [];
+            $num = 0;
+            
+            foreach($photos as $num=>$photo)
+            {
+                $num += 1;
+                $url = $photo->photos_url;
+                $photo_array[$num] = $url;
+            }
+        }else{
+            $photo_array = [];
+        }
         
-        return view('notes.detail', ['note' => $note, 'photos' => $photos]);
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        return view('notes.detail', ['note' => $note, 'photos' => $photo_array]);
     }
 }

@@ -1,0 +1,14 @@
+.photoform-container input{
+    display:none;
+    background-color: black;
+    color: white;
+}
+
+.photoform-container label {
+    color: white; 
+    font-size: 13px; 
+    background-color: grey;
+    padding: 6px; 
+    border-radius: 10px; 
+    cursor:pointer; 
+}
