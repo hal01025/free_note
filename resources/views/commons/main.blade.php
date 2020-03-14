@@ -59,13 +59,13 @@
           <p>次に、Descriptionの欄にはnoteの説明文を入力してください</br>(この項目は入力しなくてもnoteは作成できます)</p>
           <p>Articleの欄には本文を入力してください</p>
           <p>Photosの欄には複数の写真を選択してアップロードすることができます</p>
-          <p>写真の複数アップロードを行いたい場合はshiftを押した状態でファイルをクリックすることで選択することができます</p>
+          <p>写真の複数アップロードを行いたい場合はCtrlかShiftを押した状態でファイルをクリックすることで選択することができます</p>
           <p>noteの作成後、noteは非公開状態となっていますが、note詳細ページからshare/protectボタンで公開/非公開の状態を切り替えることができます</p>
           <div class="note-list-container">
             <div class="fixed-tag">
               <div class="fixed-tag-wrapper">
                 <img class="fixed-tag-image" src="{{ secure_asset('https://storage-hal2.s3.ap-northeast-1.amazonaws.com/photos/note_image.0.png') }}">
-                <p class="fixed-tag-para">右の写真のようにshiftキーを押した状態だとファイルを複数選択することができます</br>(1つのnoteにつき投稿できる写真は5枚までです)</p>
+                <p class="fixed-tag-para">右の写真のようにCtrl/Shiftキーを押した状態だとファイルを複数選択することができます</br>(1つのnoteにつき投稿できる写真は5枚までです)</p>
               </div>
               <div class="fixed-tag-wrapper">
                 <div class="fixed-photo"></div>

@@ -12,6 +12,9 @@ class NoteDetailsController extends Controller
     public function show($id)
     {
         $note = Note::find($id);
+        
+        $auther = $note->user()->first();
+
         //dd($note);
         if($note)
         {
@@ -29,6 +32,6 @@ class NoteDetailsController extends Controller
             $photo_array = [];
         }
         
-        return view('notes.detail', ['note' => $note, 'photos' => $photo_array]);
+        return view('notes.detail', ['note' => $note, 'auther' => $auther, 'photos' => $photo_array]);
     }
 }

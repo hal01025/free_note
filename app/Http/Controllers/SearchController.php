@@ -26,7 +26,7 @@ class SearchController extends Controller
         foreach($users as $user) 
         {
             $notes = $user->public_notes();
-            $searched_notes = $notes->where('title', 'LIKE', '%'.$searchText.'%')->orwhere('description', 'LIKE', '%'.$searchText.'%')->get();
+            $searched_notes = $notes->where('title', 'LIKE', '%'.$searchText.'%')->orwhere('description', 'LIKE', '%'.$searchText.'%')->orderBy('id', 'desc')->get();
             foreach($searched_notes as $searched_note)
             {
                 $key += 1;

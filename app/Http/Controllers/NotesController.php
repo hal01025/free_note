@@ -14,8 +14,10 @@ class NotesController extends Controller
     public function index(Request $request) 
     {
         $users = User::all();
+        $var_array = [];
         $note_array = [];
         $photo_array = [];
+        $sort = [];
         $num = 0;
         
         $user1 = User::find(1);
@@ -25,15 +27,23 @@ class NotesController extends Controller
         {
             $notes = $user->public_notes()->get();
             
-            foreach($notes as $note) 
+            foreach($notes as $key=>$note) 
             {
                 $note_id = $note->id;
                 $note_title = $note->title;
-                $note_array[$note_id] = $note_title;
+                $var_array['title'] = $note_title;
+                $var_array['id'] = $note_id;
+                
+                $note_array[$key] = $var_array;
             }
         }
         
-        krsort($note_array);
+        foreach ((array) $note_array as $key => $value) {
+            $sort[$key] = $value['id'];
+        }
+        
+        array_multisort($sort, SORT_DESC, $note_array);
+        //dd($note_array);
 
         $public_notes = new LengthAwarePaginator(
             array_slice($note_array, ($request->page - 1)*8),
@@ -138,9 +148,10 @@ class NotesController extends Controller
         $this->validate($request, [
             'title' => 'required|max:15',
             'description' => 'max:30',
-            'article' => 'required|max:1500',
+            'article' => 'required|max:1000',
             'photos' => 'max:5',
-            'photos[]' => 'file|image|max:2000'
+            'photos.*.file' => 'file|image|max:2000',
+
             ]);
         
         $genre = Genre::find($id);
@@ -156,20 +167,24 @@ class NotesController extends Controller
         
         $photos = $request->file('photos'); 
         //dd($photos);
+        
         if ($photos) {
             foreach($photos as $num => $photo) {
-                $ext = $photo['file']->guessExtension();
-                $user_id = \Auth::id();
-                $note_id = $note->id;
-                $filename = "{$request->title}.{$user_id}.{$note_id}.{$num}.{$ext}";
-                $path = Storage::disk('s3')->putFileAs('photos', $photo['file'], $filename);
-                
-                Storage::disk('s3')->setVisibility('photos/'.$filename, 'public');
-                
-                $note->photos()->create([
-                    'photos_url'=> Storage::disk('s3')->url($path),
-                    'photo_title' => "{$request->title}.{$num}.{$ext}",
-                ]);
+                //dd($photo['file']);
+                if($photo['file']) {
+                    $ext = $photo['file']->guessExtension();
+                    $user_id = \Auth::id();
+                    $note_id = $note->id;
+                    $filename = "{$request->title}.{$user_id}.{$note_id}.{$num}.{$ext}";
+                    $path = Storage::disk('s3')->putFileAs('photos', $photo['file'], $filename);
+                    
+                    Storage::disk('s3')->setVisibility('photos/'.$filename, 'public');
+                    
+                    $note->photos()->create([
+                        'photos_url'=> Storage::disk('s3')->url($path),
+                        'photo_title' => "{$request->title}.{$num}.{$ext}",
+                    ]);
+                }
                     //dd(Storage::disk('s3')->url($path));
             }
             //dd(Storage::disk('s3')->url($path));

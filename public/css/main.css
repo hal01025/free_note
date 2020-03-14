@@ -204,12 +204,21 @@
 }
 
 @media(max-width: 767px) {
+    .note-list-container {
+        margin-top: 0;
+    }
+    
     .fixed-tag {
-        display: none;
+        display: block;
+    }
+    
+    .fixed-tag-wrapper {
+        width: 90%;
+        margin: 0 auto;
     }
     
     .note-container {
-        height: 850px;
+        height: 1200px;
     }
     
     .main-wrapper {
@@ -222,6 +231,7 @@
 
     .note {
         width: 100%;
+        height: 95%;
     }
     
     .note p {

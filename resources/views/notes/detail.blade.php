@@ -10,6 +10,7 @@
         <div class="note-wrapper">
           <h2 class="">Title: {{ $note->title }}</h2>
           <p class="">Description: {{ $note->description }}</p>
+          <p class="">Auther: {{ $auther->name }}</p>
           <p class="article">Article: </br>{!! nl2br($note->article) !!}</p>
           <div class="row">
             @if(Auth::id() === $note->user_id)
