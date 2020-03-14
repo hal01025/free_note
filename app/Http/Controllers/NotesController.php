@@ -209,12 +209,6 @@ class NotesController extends Controller
     
     public function edit($id) 
     {
-        $this->validate($request, [
-            'title' => 'required|max:25',
-            'description' => 'max:50',
-            'article' => 'required|max:1500',
-            ]);
-        
         $note = Note::find($id);
         $photos = $note->photos()->get();
         $photo_array = [];
@@ -235,6 +229,12 @@ class NotesController extends Controller
     
     public function update(Request $request, $id)
     {
+        $this->validate($request, [
+            'title' => 'required|max:25',
+            'description' => 'max:50',
+            'article' => 'required|max:1500',
+            ]);
+        
         $note = Note::find($id);
         
         $note->title = $request->title;
