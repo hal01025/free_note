@@ -7,41 +7,44 @@ use App\Note;
 use App\Genre;
 use App\User;
 use Storage;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class NotesController extends Controller
 {
-    public function index() 
+    public function index(Request $request) 
     {
         $users = User::all();
-        $var_array = [];
         $note_array = [];
         $photo_array = [];
         $num = 0;
         
+        $user1 = User::find(1);
+        //dd($user1->public_notes()->get());
+        
         foreach($users as $user) 
         {
-            $notes = $user->public_notes()->orderBy('id', 'desc')->paginate(10);
+            $notes = $user->public_notes()->get();
             
             foreach($notes as $note) 
             {
                 $note_id = $note->id;
                 $note_title = $note->title;
-                $var_array[$note_id] = $note_title;
+                $note_array[$note_id] = $note_title;
             }
         }
         
-        krsort($var_array);
-        
-        foreach($var_array as $id=>$title) 
-        {
-            $num += 1;
-            if($num <= 10)
-            {
-                $note_array[$id] = $title;
-            }
-        }
-        
-        //dd($note_array);
+        krsort($note_array);
+
+        $public_notes = new LengthAwarePaginator(
+            array_slice($note_array, ($request->page - 1)*8),
+            count($note_array),
+            8,
+            $request->page,
+            array('path' => $request->url())
+        );
+
+        //dd($request->url());
+        //dd($public_notes);
         
         $notes = \Auth::user()->notes()->get();
         
@@ -63,7 +66,7 @@ class NotesController extends Controller
         $photo_array = array_slice($photo_array, 0, 25);
         }
         
-        return view('notes.index', ['notes' => $note_array, 'photos' => $photo_array]);
+        return view('notes.index', ['notes' => $public_notes, 'photos' => $photo_array]);
     }
     
     public function show($id) 
@@ -75,6 +78,8 @@ class NotesController extends Controller
         $my_notes = \Auth::user()->notes()->get();
         $num = 0;
         $photo_array = [];
+        
+        //dd($notes);
         
         foreach($my_notes as $note) 
         {
@@ -131,8 +136,8 @@ class NotesController extends Controller
     public function store(Request $request, $id) 
     {
         $this->validate($request, [
-            'title' => 'required|max:25',
-            'description' => 'max:50',
+            'title' => 'required|max:15',
+            'description' => 'max:30',
             'article' => 'required|max:1500',
             'photos' => 'max:5',
             'photos[]' => 'file|image|max:2000'

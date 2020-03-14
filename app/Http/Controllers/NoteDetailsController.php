@@ -13,7 +13,7 @@ class NoteDetailsController extends Controller
     {
         $note = Note::find($id);
         //dd($note);
-        if($note->photos()->exists())
+        if($note)
         {
             $photos = $note->photos()->get();
             $photo_array = [];

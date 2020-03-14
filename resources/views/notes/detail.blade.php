@@ -19,7 +19,7 @@
             <div class="col-sm-1">
               @include('commons.share_button')
             </div>
-            <div class="col-sm-1">
+            <div class="col-sm-1 offset-sm-8">
               {!! Form::open(['route' => ['notes.destroy', $note->id], 'method' => 'delete']) !!}
                   {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm mt-3']) !!}
               {!! Form::close() !!}

@@ -33,7 +33,7 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout.get');
 
 Route::group(['middleware' => ['auth']], function() {
     Route::resource('notes', 'NotesController');
-    Route::post('search', 'SearchController@index');
+    Route::get('search', 'SearchController@index')->name('search.index');
     Route::resource('note_details', 'NoteDetailsController', ['only' => ['show']]);
     Route::group(['prefix' => 'my-page/{id}'], function() {
        Route::get('notes', 'NotesController@show')->name('notes.show');

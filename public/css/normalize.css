@@ -40,3 +40,11 @@ ul.alert-danger.alert-danger.error {
     line-height: 1;
     font-size: 10px;
 }
+
+.submit-btn input{
+    margin-top: 3px;
+}
+
+div.search-box {
+    padding-right: 0;
+}
