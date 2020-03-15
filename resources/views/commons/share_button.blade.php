@@ -1,4 +1,4 @@
-@if(!$note->is_shared(Auth::id()))
+@if(!Auth::user()->is_shared($note->id))
     <div class="share/protect-button">
         {!! Form::open(['route' => ['notes.share', $note->id]]) !!}
             {!! Form::submit('Share', ['class' => "btn btn-success btn-sm mt-3"]) !!}

@@ -21,8 +21,7 @@ class CreatePrivacyNoteTable extends Migration
             
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('privacy_id')->references('id')->on('notes')->onDelete('cascade');
-            
-            $table->unique(['user_id','privacy_id']);
+
         });
     }
 

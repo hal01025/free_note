@@ -20,9 +20,6 @@ class NotesController extends Controller
         $sort = [];
         $num = 0;
         
-        $user1 = User::find(1);
-        //dd($user1->public_notes()->get());
-        
         foreach($users as $user) 
         {
             $notes = $user->public_notes()->get();

@@ -16,7 +16,7 @@
             @foreach($notes as $note)
               <h3 class="mt-2">
                 Title: {{ $note->title }}
-                @if($note->is_shared(Auth::id()))
+                @if(Auth::user()->is_shared($note->id))
                 <span class="badge badge-info shared">shared</span>
                 @else
                 <span class="badge badge-dark protected">protected</span>

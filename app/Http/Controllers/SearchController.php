@@ -18,6 +18,7 @@ class SearchController extends Controller
         $users = User::all();
         $note_array = [];
         $note_container = [];
+        $photo_array = [];
         $key = 0;
         $num = 0;
         
@@ -26,7 +27,10 @@ class SearchController extends Controller
         foreach($users as $user) 
         {
             $notes = $user->public_notes();
-            $searched_notes = $notes->where('title', 'LIKE', '%'.$searchText.'%')->orwhere('description', 'LIKE', '%'.$searchText.'%')->orderBy('id', 'desc')->get();
+            $searched_notes = $notes->where('title', 'LIKE', '%'.$searchText.'%')->orderBy('id', 'desc')->get();
+            
+            //dd($searched_notes);
+            
             foreach($searched_notes as $searched_note)
             {
                 $key += 1;
@@ -37,8 +41,10 @@ class SearchController extends Controller
                 
                 $note_container[$key] = $note_array;
             }
+            //dd($note_container);
         }
-
+        
+        //dd($note_container);
         
         $result_notes = new LengthAwarePaginator(
             array_slice($note_container, ($request->page - 1)*5),

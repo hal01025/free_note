@@ -9,17 +9,17 @@ class ShareController extends Controller
 {
     public function store($id)
     {
-        $note = Note::find($id);
+        $user = \Auth::user();
         //dd($note);
-        $note->share(\Auth::id());
+        $user->share($id);
         
         return back();
     }
     
     public function destroy($id)
     {
-        $note = Note::find($id);
-        $note->protect(\Auth::id());
+        $user = \Auth::user();
+        $user->protect($id);
         
         return back();
     }

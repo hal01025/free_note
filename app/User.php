@@ -36,4 +36,27 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Note::class, 'privacy_note', 'user_id', 'privacy_id')->withTimestamps();
     }
+    
+    public function share($noteId) 
+    {
+        if(!$this->is_shared($noteId))
+        {
+            $this->public_notes()->attach($noteId);
+            return true;
+        }
+    }
+    
+    public function protect($noteId)
+    {
+        if($this->is_shared($noteId))
+        {
+            $this->public_notes()->detach($noteId);
+            return true;
+        }
+    }
+    
+    public function is_shared($noteId)
+    {
+        return $this->public_notes()->where('privacy_id', $noteId)->exists();
+    }
 }
