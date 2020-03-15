@@ -184,24 +184,71 @@ class NotesController extends Controller
                 }
                     //dd(Storage::disk('s3')->url($path));
             }
-            //dd(Storage::disk('s3')->url($path));
         }
+
+        $belonging_notes = $genre->belonging_notes();
+        $notes = $belonging_notes->where('user_id', \Auth::id())->orderBy('id', 'desc')->paginate(5);
+        $count = $belonging_notes->count();
+        $my_notes = \Auth::user()->notes()->get();
+        $num = 0;
+        $photo_array = [];
+        
+        foreach($my_notes as $note) 
+        {
+            $photos = $note->photos()->get();
             
+            foreach($photos as $key=>$photo) 
+            {
+                $num += 1;
+                $photo_url = $photo->photos_url;
+                $photo_array[$num] = $photo_url;
+            }
+        }
         
+        if($photo_array) 
+        {
+        krsort($photo_array);
+        $photo_array = array_slice($photo_array, 0, 25);
+        }
         
-        return redirect('my-page');
+        return view('notes.list', ['notes' => $notes, 'genre' => $genre, 'photos' => $photo_array]);
     }
+    
     
     public function destroy($id) 
     {
         $note = Note::find($id);
+        $genre = $note->genre()->first();
+        //dd($genre);        
         
-        if(\Auth::id() === $note->user_id) 
+        if(\Auth::id() === $note->user_id) { $note->delete(); }
+        
+        $belonging_notes = $genre->belonging_notes();
+        $notes = $belonging_notes->where('user_id', \Auth::id())->orderBy('id', 'desc')->paginate(5);
+        $count = $belonging_notes->count();
+        $my_notes = \Auth::user()->notes()->get();
+        $num = 0;
+        $photo_array = [];
+        
+        foreach($my_notes as $note) 
         {
-            $note->delete();
+            $photos = $note->photos()->get();
+            
+            foreach($photos as $key=>$photo) 
+            {
+                $num += 1;
+                $photo_url = $photo->photos_url;
+                $photo_array[$num] = $photo_url;
+            }
         }
         
-        return redirect('my-page');
+        if($photo_array) 
+        {
+        krsort($photo_array);
+        $photo_array = array_slice($photo_array, 0, 25);
+        }
+        
+        return view('notes.list', ['notes' => $notes, 'genre' => $genre, 'photos' => $photo_array]);
     }
     
     public function edit($id) 

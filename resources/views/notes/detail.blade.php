@@ -22,7 +22,7 @@
             </div>
             <div class="col-sm-1 offset-sm-8">
               {!! Form::open(['route' => ['notes.destroy', $note->id], 'method' => 'delete']) !!}
-                  {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm mt-3']) !!}
+                  {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm mt-3 delete-btn']) !!}
               {!! Form::close() !!}
             </div>
             @endif
@@ -32,7 +32,7 @@
      </div>
     </div>
 </div>
-
+@include('commons.scroll_btn')
 @include('commons.responsive_gallery')
 
 @endsection

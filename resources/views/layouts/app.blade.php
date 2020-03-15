@@ -57,6 +57,7 @@
         <script src="{{ secure_asset('js/lightbox.js') }}"></script>
         <script src="{{ secure_asset('js/humberger_menu.js') }}"></script>
         <script src="{{ secure_asset('js/tab.js') }}"></script>
+        <script src="{{ secure_asset('js/main.js') }}"></script>
         
     </body>
 </html>
