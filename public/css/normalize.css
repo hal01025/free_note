@@ -50,6 +50,7 @@ div.search-box {
 }
 
 .scroll {
+    display: none;
     position: fixed;
     z-index: 1000;
     bottom: 10px;
@@ -57,16 +58,16 @@ div.search-box {
 }
 
 .scroll-btn {
-    font-size: 40px;
+    font-size: 20px;
     color: white;
 }
 
 .scroll-link {
     display: block;
     color: white;
-    padding: 0px 16px;
+    padding: 14px 22px;
     background-color: rgba(40,40,40,0.5);
-    border-radius: 10px;
+    border-radius: 50%;
 }
 
 .scroll a:hover{

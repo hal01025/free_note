@@ -5,7 +5,6 @@ $delete.on('click', () => {
 });
 
 $(window).on('load', () => {
-    $('.scroll').hide();
     $('html, body').animate({ scrollTop: $('.image-gallery').offset().top }, 1500);
 });
 
@@ -15,7 +14,7 @@ $scroll.on('click', (e) => {
 });
 
 $(window).on('scroll', () => {
-    if($(window).scrollTop() >= 300) {
+    if($(window).scrollTop() >= 100) {
         $('.scroll').fadeIn();
     } else {
         $('.scroll').fadeOut();
