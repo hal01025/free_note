@@ -11,6 +11,10 @@ $(window).on('load', () => {
     $('html, body').animate({ scrollTop: $('.image-gallery').offset().top }, 800);
 });
 
+$('.tag').on('click', () => {
+    $('html, body').animate({ scrollTop: $('.image-gallery').offset().top }, 600);
+});
+
 $scroll.on('click', (e) => {
     e.preventDefault();
     $('html, body').animate({ scrollTop: 0 }, 400);
