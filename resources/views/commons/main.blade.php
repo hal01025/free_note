@@ -39,7 +39,7 @@
           
         </div>
       </div>
-      <div class="tag tag-3"><p class="tag-icon-white"><i class="far fa-edit"></i></p></div>
+      <div class="tag tag-3"><p class="tag-icon-black"><i class="far fa-edit"></i></p></div>
       <div class="note note-3">
         <div class="note-wrapper">
           <h2 class="">New_Note</h2>
