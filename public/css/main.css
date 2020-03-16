@@ -176,6 +176,14 @@
     border-style: none;
 }
 
+.tag-icon {
+    font-size: 20px;
+    color: white;
+}
+
+.tag p {
+    text-align: center;
+}
 
 @media(max-width: 1300px) {
     .note-container {

@@ -1,7 +1,7 @@
 <div class="main-container row">
   <div class="main-wrapper col-lg-8 offset-lg-2">
     <div class="note-container">
-      <div class="tag tag-1"></div>
+      <div class="tag tag-1"><p class="tag-icon"><i class="fas fa-info-circle"></i></p></div>
       <div class="note note-1">
         <div class="note-wrapper">
           <h2 class="">How_to_use</h2>
@@ -26,7 +26,7 @@
           </div>
         </div>
       </div>
-      <div class="tag tag-2"></div>
+      <div class="tag tag-2"><p class="tag-icon"><i class="fas fa-info-circle"></i></p></div>
       <div class="note note-2">
         <div class="note-wrapper">
           <h2 class="">Note_List</h2>
@@ -39,7 +39,7 @@
           
         </div>
       </div>
-      <div class="tag tag-3"></div>
+      <div class="tag tag-3"><p class="tag-icon"><i class="fas fa-info-circle"></i></p></div>
       <div class="note note-3">
         <div class="note-wrapper">
           <h2 class="">New_Note</h2>
@@ -51,7 +51,7 @@
         @endforeach
         </div>
       </div>
-      <div class="tag tag-4"></div>
+      <div class="tag tag-4"><p class="tag-icon"><i class="fas fa-info-circle"></i></p></div>
       <div class="note note-4">
         <div class="note-wrapper">
           <h2 class="">Information</h2>
