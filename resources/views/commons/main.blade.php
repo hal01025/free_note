@@ -26,7 +26,7 @@
           </div>
         </div>
       </div>
-      <div class="tag tag-2"><p class="tag-icon-black"><i class="fas fa-list"></i></p></div>
+      <div class="tag tag-2"><p class="tag-icon-white"><i class="fas fa-list"></i></p></div>
       <div class="note note-2">
         <div class="note-wrapper">
           <h2 class="">Note_List</h2>
