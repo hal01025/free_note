@@ -7,9 +7,9 @@
 @section('content')
 @include("commons.error_messages")
 <div class="login">
-    <div class="login-container col-8 offset-2">
+    <div class="login-container">
         
-        <div class="login-wrapper col-6 offset-3">
+        <div class="login-wrapper col-sm-6 offset-sm-3">
             <h2 class="text-center">Log_in</h2>
             <div class="login-form">
             {!! Form::open(['route' => 'login.post']) !!}

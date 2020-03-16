@@ -12,7 +12,7 @@ $(window).on('load', () => {
 });
 
 $('.tag').on('click', () => {
-    $('html, body').animate({ scrollTop: $('.image-gallery').offset().top }, 600);
+    $('html, body').animate({ scrollTop: $('.main-container').offset().top }, 600);
 });
 
 $scroll.on('click', (e) => {

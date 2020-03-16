@@ -9,13 +9,8 @@
 }
 
 @media(max-width: 576px) {
-    .register {
-        background-image: none;
-        background-color: rgb(73,58,48);
-    }
-    
     .register-wrapper h2 {
-        color: white;
+        margin-top: 20px;
     }
     
     .form-group label{

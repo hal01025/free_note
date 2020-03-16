@@ -9,7 +9,11 @@
 }
 
 @media(max-width: 576px) {
-    .login {
-        background-size: 230vw;
+    .login-wrapper h2 {
+        margin-top: 20px;
+    }
+    
+    .form-group label {
+        color: white;
     }
 }
