@@ -38,8 +38,9 @@
 
 .gallery-btn {
     position: absolute;
+    z-index: 10;
     bottom: -55px;
-    left: -55px;
+    left: -58px;
     cursor: pointer;
 }
 
@@ -50,7 +51,6 @@
     padding: 35px 40px 35px 40px;
     border-radius: 50%;
     background-color: black;
-    opacity: 0.8;
 }
 
 .image-gallery-container {
@@ -88,6 +88,38 @@
 .photo-title {
     font-size: 14px;
     text-align: center;
+}
+
+.side-menu {
+    width: 300px;
+    height: 800px;
+    background-color: rgba(0,0,0,0.9);
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: -300px;
+}
+
+.side-menu-list {
+    color: white;
+}
+
+.side-menu-title {
+    color: white;
+    margin: 50px 20px 30px 20px;
+}
+
+.side-menu-list {
+    line-height: 75px;
+}
+
+.side-menu-link {
+    color: white;
+    padding: 0 30px;
+}
+
+.side-menu-link:hover {
+    color: grey;
 }
 
 

@@ -11,6 +11,19 @@
         <div class="gallery-btn">
             <p><i class="fas fa-arrows-alt-h"></i></p>
         </div>
+        <div class="side-menu">
+            <ul class="side-menu-list">
+                <li class="side-menu-list"><h4 class="side-menu-title">Menu_list</h4></li>
+                <li class="side-menu-item"><a href="" class="side-menu-link">item1(未実装)</a></li>
+                <li class="side-menu-item"><a href="" class="side-menu-link">item2(未実装)</a></li>
+                <li class="side-menu-item"><a href="" class="side-menu-link">item3(未実装)</a></li>
+                <li class="side-menu-item"><a href="" class="side-menu-link">item4(未実装)</a></li>
+                <li class="side-menu-item"><a href="" class="side-menu-link">item5(未実装)</a></li>
+                <li class="side-menu-item"><a href="" class="side-menu-link">item6(未実装)</a></li>
+                <li class="side-menu-item"><a href="" class="side-menu-link">item7(未実装)</a></li>
+                <li class="side-menu-item"><a href="" class="side-menu-link">機能追加予定</a></li>
+            </ul>
+        </div>
         <div class="image-gallery-container animated fadeInUp">
             @if($photos)    
                 @foreach($photos as $num=>$photo)    
