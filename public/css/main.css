@@ -264,21 +264,15 @@
     }
     
     .tag-2 {
-    margin-left: 58px;
-    z-index: 1;
-    background-image: linear-gradient(#15F23E, #2DE45C);
+        margin-left: 58px;
     }
     
     .tag-3 {
         margin-left: 113px;
-        z-index: 1;
-        background-image: linear-gradient(#3B5FFB, #1D2EDA);
     }
     
     .tag-4 {
         margin-left: 168px;
-        z-index: 1;
-        background-image: linear-gradient(#FCF533, #FDF411);
     }
     
     .link-tag {
