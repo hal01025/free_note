@@ -13,7 +13,7 @@ const $note = $('.note');
 
 $red.on('click', () => {
     $tag.css({
-        'z-index': 0,
+        'z-index': 2,
     });
     $note.hide();
     $red_note.show();
@@ -27,7 +27,7 @@ $red.on('click', () => {
 
 $green.on('click', () => {
     $tag.css({
-        'z-index': 0,
+        'z-index': 2,
     });
     $note.hide();
     $green_note.show();
@@ -41,7 +41,7 @@ $green.on('click', () => {
 
 $blue.on('click', () => {
     $tag.css({
-        'z-index': 0,
+        'z-index': 2,
     });
     $note.hide();
     $blue_note.show();
@@ -55,7 +55,7 @@ $blue.on('click', () => {
 
 $yellow.on('click', () => {
     $tag.css({
-        'z-index': 0,
+        'z-index': 2,
     });
     $note.hide();
     $yellow_note.show();
