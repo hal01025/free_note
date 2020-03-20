@@ -1,5 +1,5 @@
 .login {
-    background-image: url(https://storage-hal2.s3.ap-northeast-1.amazonaws.com/photos/topimage.0.jpeg);
+    background-image: url(https://storage-hal2.s3-ap-northeast-1.amazonaws.com/photos/desk-3076954_1920.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -8,12 +8,28 @@
     padding: 20vw 0 10vw 0;
 }
 
-@media(max-width: 576px) {
-    .login-wrapper h2 {
-        margin-top: 20px;
+.login-wrapper h2 {
+    color: black;
+}
+
+.login-wrapper label {
+    color: black;
+}
+
+.login-wrapper p {
+    color: black;
+}
+
+.login-wrapper a {
+    color: black;
+}
+
+@media(max-width: 767px) {
+    .login-container {
+        padding-top: 30vw;
     }
     
-    .form-group label {
-        color: white;
+    .to-registration {
+        padding-top: 20vw;
     }
 }

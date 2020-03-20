@@ -1,5 +1,5 @@
 const $delete = $('.delete-btn');
-const $scroll = $('.scroll-link');
+const $back = $('.back-link');
 const $menu_btn = $('.gallery-btn');
 let count = 0;
 
@@ -7,25 +7,9 @@ $delete.on('click', () => {
     confirm('削除しますか?');
 });
 
-$(window).on('load', () => {
-    $('html, body').animate({ scrollTop: $('.image-gallery').offset().top }, 800);
-});
-
-$('.tag').on('click', () => {
-    $('html, body').animate({ scrollTop: $('.main-container').offset().top }, 600);
-});
-
-$scroll.on('click', (e) => {
+$back.on('click', (e) => {
     e.preventDefault();
     $('html, body').animate({ scrollTop: 0 }, 400);
-});
-
-$(window).on('scroll', () => {
-    if($(window).scrollTop() >= 100) {
-        $('.scroll').fadeIn();
-    } else {
-        $('.scroll').fadeOut();
-    }
 });
 
 function open() {
@@ -37,6 +21,14 @@ function open() {
     $('.gallery-btn').animate({
         left: '242px',
     }, 600);
+    
+    $('.note').animate({
+        left: '100px',
+    }, 600);
+    
+    $('.tag').animate({
+        left: '115px',
+    }, 600);
 };
 
 function close() {
@@ -47,6 +39,14 @@ function close() {
     
     $('.gallery-btn').animate({
         left: '-58px',
+    }, 600);
+    
+    $('.note').animate({
+        left: '0px',
+    }, 600);
+    
+    $('.tag').animate({
+        left: '15px',
     }, 600);
 };
 

@@ -8,7 +8,6 @@
 @include("commons.error_messages")
 <div class="login">
     <div class="login-container">
-        
         <div class="login-wrapper col-sm-6 offset-sm-3">
             <h2 class="text-center">Log_in</h2>
             <div class="login-form">
@@ -27,7 +26,7 @@
                 <p>{!! Form::submit('Log in', ['class' => 'btn btn-secondary']) !!}</p>
                 </div>
             {!! Form::close() !!}
-            <p class="mt-2 text-center mb-3">新規登録の方は {!! link_to_route('signup.get', 'sign_up!') !!}</p>
+            <p class="mt-2 text-center mb-2 to-registration">新規登録の方は {!! link_to_route('signup.get', 'sign_up!') !!}</p>
             </div>
         </div>
     </div>

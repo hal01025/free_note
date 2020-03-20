@@ -1,6 +1,5 @@
 header {
     position: relative;
-
 }
 
 .header-outer {
@@ -20,7 +19,7 @@ header {
     line-height: 120px;
     letter-spacing: 8px;
     font-weight: 800;
-    color: white;
+    color: black;
 }
 
 .header-logo {
@@ -47,6 +46,10 @@ header {
     letter-spacing: 1px;
 }
 
+.header-menu a:hover {
+    color: grey;
+}
+
 .header-menu li, .header-menu ul {
     opacity: 1;
 }
@@ -59,6 +62,10 @@ header {
 
 
 @media (max-width: 767px) {
+    .header-title h1 {
+        color: white;
+    }
+    
     .humberger-btn {
         display: block;
         color: white;

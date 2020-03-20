@@ -17,16 +17,16 @@
       @if(!Auth::check())
       <div class="header-menu">
           <ul>
-              <li class="menu-list"><a href="{{ route('signup.post') }}" id="open-note"><i class="fas fa-user-plus"></i> sign_up</a></li>
-              <li class="menu-list"><a href="{{ route('auth.login') }}" id="private-note"><i class="fas fa-sign-in-alt"></i> log_in</a></li>
+              <li class="menu-list"><a href="{{ route('signup.post') }}"><i class="fas fa-user-plus"></i> sign_up</a></li>
+              <li class="menu-list"><a href="{{ route('auth.login') }}"><i class="fas fa-sign-in-alt"></i> log_in</a></li>
           </ul>
       </div>
       @else
       <div class="header-menu">
           <ul>
-              <li class="menu-list"><a href="{{ route('notes.index') }}" id="open-note"><i class="fas fa-book-open"></i> public_note</a></li>
-              <li class="menu-list"><a href="{{ route('my-page') }}" id="private-note"><i class="fas fa-user"></i> my_page</a></li>
-              <li class="menu-list"><a href="{{ route('logout.get') }}" id=""><i class="fas fa-door-open"></i> log_out</a></li>
+              <li class="menu-list"><a href="{{ route('notes.index') }}"><i class="fas fa-book-open"></i> public_note</a></li>
+              <li class="menu-list"><a href="{{ route('my-page') }}"><i class="fas fa-user"></i> my_page</a></li>
+              <li class="menu-list"><a href="{{ route('logout.get') }}"><i class="fas fa-door-open"></i> log_out</a></li>
           </ul>
       </div>
       

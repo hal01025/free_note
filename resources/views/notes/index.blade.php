@@ -15,8 +15,8 @@
             <h2 class="mt-3 mb-3">Public_note</h2>
             @include('commons.search_form')
             @foreach($notes as $note)
-              <h3 class="mt-2 mb-3">Title: {{ $note['title'] }}</h3>
-              <a href="{{ route('note_details.show', $note['id']) }}" class=""><div class="link-tag"><p>link</p></div></a>
+              <a href="{{ route('note_details.show', $note['id']) }}" class=""><h3 class="mt-2 mb-2">Title: {{ $note['title'] }}</h3></a>
+              <p class="">Description: {{ $note['description'] }}</p>
             @endforeach
             <div class="pagination-wrapper">
               <div class="pagination-box">{{ $notes->links('pagination::bootstrap-4') }}</div>

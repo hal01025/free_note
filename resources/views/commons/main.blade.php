@@ -4,7 +4,7 @@
       <div class="tag tag-1"><p class="tag-icon-white"><i class="fas fa-home"></i></p></div>
       <div class="note note-1">
         <div class="note-wrapper">
-          <h2 class="">How_to_use</h2>
+          <h2 class="pb-3">How_to_use</h2>
           <p class="">(1) 青色のタブから自分の作成した全てのnote一覧を閲覧することができます。</p>
           <p class="">(2) 緑色のタブからnoteの新規作成ページへとアクセスできます。</p>
           <p class="">(3) 黄色のタブをクリックするとnoteの作成の説明ページが表示されます。</p>
@@ -29,7 +29,7 @@
       <div class="tag tag-2"><p class="tag-icon-white"><i class="fas fa-list"></i></p></div>
       <div class="note note-2">
         <div class="note-wrapper">
-          <h2 class="">Note_List</h2>
+          <h2 class="pb-3">Note_List</h2>
           <p>各ジャンルごとにnoteがまとめられています。</p>
           <p>以下のジャンルから1つ選択すると、そのnote一覧が確認できます。</p>
           @foreach($genres as $genre)
@@ -39,10 +39,10 @@
           
         </div>
       </div>
-      <div class="tag tag-3"><p class="tag-icon-black"><i class="far fa-edit"></i></p></div>
+      <div class="tag tag-3"><p class="tag-icon-white"><i class="far fa-edit"></i></p></div>
       <div class="note note-3">
         <div class="note-wrapper">
-          <h2 class="">New_Note</h2>
+          <h2 class="pb-3">New_Note</h2>
           <p>各ジャンルごとにnoteの作成ができます。</p>
           <p>以下のジャンルから1つを選択してnoteを作成して下さい。</p>
           @foreach($genres as $genre)
@@ -54,7 +54,7 @@
       <div class="tag tag-4"><p class="tag-icon-black"><i class="fas fa-info-circle"></i></p></div>
       <div class="note note-4">
         <div class="note-wrapper">
-          <h2 class="">Information</h2>
+          <h2 class="pb-3">Information</h2>
           <p>Titleの欄にnoteのタイトルを入力してください</p>
           <p>次に、Descriptionの欄にはnoteの説明文を入力してください</br>(この項目は入力しなくてもnoteは作成できます)</p>
           <p>Articleの欄には本文を入力してください</p>

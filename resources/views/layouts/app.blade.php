@@ -27,18 +27,6 @@
         <title>Free_note</title>
     </head>
     
-    <style>
-        .top-image {
-            background-image: url(https://storage-hal2.s3.ap-northeast-1.amazonaws.com/photos/background-image.0.jpg);
-            background-size: cover;
-        }
-        .main-container {
-            width: 100%;
-            margin: 0;
-            background-image: url(https://storage-hal2.s3.ap-northeast-1.amazonaws.com/photos/background-image2.0.jpg);
-            background-size: cover;
-        }
-    </style>
     
     <body>
         @include("commons.header")

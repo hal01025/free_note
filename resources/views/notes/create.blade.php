@@ -15,17 +15,17 @@
         <h2>Genre: {{ $genre->genre }}</h2>
         <form action="{{ action('NotesController@store', $id) }}" method="post" enctype="multipart/form-data">
             <div class="form-group pt-2">
-                {!! Form::label('title', 'Title: (15文字まで)') !!}
+                {!! Form::label('title', 'Title: (25文字まで)') !!}
                 {!! Form::text('title', old('title'), ['class' => 'form-control']) !!}
             </div>
 
             <div class="form-group">
-                {!! Form::label('description', 'Description: (30文字まで)') !!}
+                {!! Form::label('description', 'Description: (50文字まで)') !!}
                 {!! Form::text('description', old('description'), ['class' => 'form-control']) !!}
             </div>
 
             <div class="form-group">
-                {!! Form::label('article', 'Article: (1000文字まで)') !!}
+                {!! Form::label('article', 'Article: (1500文字まで)') !!}
                 {!! Form::textarea('article', old('article'), ['class' => 'form-control']) !!}
             </div>
             

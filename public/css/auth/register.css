@@ -1,19 +1,17 @@
 .register {
-    background-image: url(https://storage-hal2.s3.ap-northeast-1.amazonaws.com/photos/topimage.0.jpeg);
+    background-image: url(https://storage-hal2.s3-ap-northeast-1.amazonaws.com/photos/desk-3076954_1920.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .register-container {
-    padding: 15vw 0 10vw 0;
+    padding: 20vw 0 10vw 0;
 }
 
-@media(max-width: 576px) {
-    .register-wrapper h2 {
-        margin-top: 20px;
-    }
-    
-    .form-group label{
-        color: white;
-    }
+.register-wrapper h2 {
+    color: black;
+}
+
+.register-wrapper label {
+    color: black;
 }

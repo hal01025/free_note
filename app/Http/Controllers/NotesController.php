@@ -28,8 +28,10 @@ class NotesController extends Controller
             {
                 $note_id = $note->id;
                 $note_title = $note->title;
+                $note_description = $note->description;
                 $var_array['title'] = $note_title;
                 $var_array['id'] = $note_id;
+                $var_array['description'] = $note_description;
                 
                 $note_array[$key] = $var_array;
             }
@@ -143,9 +145,9 @@ class NotesController extends Controller
     public function store(Request $request, $id) 
     {
         $this->validate($request, [
-            'title' => 'required|max:15',
-            'description' => 'max:30',
-            'article' => 'required|max:1000',
+            'title' => 'required|max:25',
+            'description' => 'max:50',
+            'article' => 'required|max:1500',
             'photos' => 'max:5',
             'photos.*.file' => 'file|image|max:2000',
 
