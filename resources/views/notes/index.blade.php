@@ -19,7 +19,7 @@
               <p class="">Description: {{ $note['description'] }}</p>
             @endforeach
             <div class="pagination-wrapper">
-              <div class="pagination-box">{{ $notes->links('pagination::bootstrap-4') }}</div>
+              <div class="pagination-box mt-3">{{ $notes->links('pagination::bootstrap-4') }}</div>
             </div>
           </div>
         </div>

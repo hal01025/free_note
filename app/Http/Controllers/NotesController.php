@@ -8,6 +8,7 @@ use App\Genre;
 use App\User;
 use Storage;
 use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Support\Collection; 
 
 class NotesController extends Controller
 {
@@ -19,41 +20,41 @@ class NotesController extends Controller
         $photo_array = [];
         $sort = [];
         $num = 0;
+        $index = 0;
         
         foreach($users as $user) 
         {
             $notes = $user->public_notes()->get();
             
-            foreach($notes as $key=>$note) 
+            foreach($notes as $note) 
             {
                 $note_id = $note->id;
                 $note_title = $note->title;
                 $note_description = $note->description;
+                
                 $var_array['title'] = $note_title;
                 $var_array['id'] = $note_id;
                 $var_array['description'] = $note_description;
                 
-                $note_array[$key] = $var_array;
+                $note_array[$index] = $var_array;
+                $index += 1;
             }
         }
         
-        foreach ((array) $note_array as $key => $value) {
+        foreach ($note_array as $key => $value) {
             $sort[$key] = $value['id'];
         }
         
         array_multisort($sort, SORT_DESC, $note_array);
-        //dd($note_array);
 
         $public_notes = new LengthAwarePaginator(
-            array_slice($note_array, ($request->page - 1)*8),
+            collect($note_array)->forPage($request->page, 6),
             count($note_array),
-            8,
+            6,
             $request->page,
             array('path' => $request->url())
         );
 
-        //dd($request->url());
-        //dd($public_notes);
         
         $notes = \Auth::user()->notes()->get();
         

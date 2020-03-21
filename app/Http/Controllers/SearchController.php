@@ -41,22 +41,26 @@ class SearchController extends Controller
                 
                 $note_container[$key] = $note_array;
             }
-            //dd($note_container);
         }
         
-        //dd($note_container);
+        if(!$request->page){
+            $page = '?page=2';
+            $currentPage = 1;
+        } else {
+            $page = null;
+            $currentPage = $request->page;
+        }
         
         $result_notes = new LengthAwarePaginator(
-            array_slice($note_container, ($request->page - 1)*5),
+            collect($note_container)->forPage($request->page, 5),
             count($note_container),
             5,
             $request->page,
             array('path' => $request->url())
         );
-        
-        //dd($request->url());
-        //dd($result_notes);
-        
+
+        //dd($request->url().'/?searchText=a'.$page);
+
         $notes = \Auth::user()->notes()->get();
         
         foreach($notes as $note) 
@@ -77,6 +81,6 @@ class SearchController extends Controller
         $photo_array = array_slice($photo_array, 0, 25);
         }
         
-        return view('notes.search', ['notes' => $result_notes, 'photos' => $photo_array]);
+        return view('notes.search', ['notes' => $result_notes, 'photos' => $photo_array, 'searchText' => $searchText]);
     }
 }

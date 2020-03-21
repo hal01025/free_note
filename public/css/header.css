@@ -68,10 +68,6 @@ header {
     
     .humberger-btn {
         display: block;
-        color: white;
-    }
-    
-    .humberger-btn {
         border: 0;
         color: white;
         background-color: rgba(0,0,0,0);

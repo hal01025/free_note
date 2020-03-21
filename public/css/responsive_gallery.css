@@ -8,10 +8,13 @@
     padding-bottom: 15px;
 }
 
-.photo-gallery-title {
+.responsive-gallery-title {
+    display: inline-block;
     font-size: 26px;
     margin-bottom: 15px;
     color: rgb(61,61,61);
+    padding: 0 5px 5px 5px;
+    border-bottom: 2px dashed black;
 }
 
 .responsive-photo-container {
