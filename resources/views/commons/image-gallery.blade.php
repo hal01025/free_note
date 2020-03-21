@@ -13,15 +13,20 @@
         </div>
         <div class="side-menu">
             <ul class="side-menu-list">
-                <li class="side-menu-list"><h4 class="side-menu-title">Menu_list</h4></li>
-                <li class="side-menu-item"><a href="" class="side-menu-link">tip1(未実装)</a></li>
-                <li class="side-menu-item"><a href="" class="side-menu-link">tip2(未実装)</a></li>
-                <li class="side-menu-item"><a href="" class="side-menu-link">tip3(未実装)</a></li>
-                <li class="side-menu-item"><a href="" class="side-menu-link">tip4(未実装)</a></li>
-                <li class="side-menu-item"><a href="" class="side-menu-link">tip5(未実装)</a></li>
-                <li class="side-menu-item"><a href="" class="side-menu-link">tip6(未実装)</a></li>
-                <li class="side-menu-item"><a href="" class="side-menu-link">tip7(未実装)</a></li>
-                <li class="side-menu-item"><a href="" class="side-menu-link">機能追加予定</a></li>
+                <li class="side-menu-list"><h4 class="side-menu-title">Portfolio</h4></li>
+                <li class="side-menu-item"><a href="" class="side-menu-link">my_portfolio(未実装)</a></li>
+                <li class="side-menu-list"><h4 class="side-menu-title">LP_Reproduction</h4></li>
+                <li class="side-menu-item"><a href="" class="side-menu-link">page1(未実装)</a></li>
+                <li class="side-menu-item"><a href="" class="side-menu-link">page2(未実装)</a></li>
+                <li class="side-menu-item"><a href="" class="side-menu-link">page3(未実装)</a></li>
+                <li class="side-menu-item"><a href="" class="side-menu-link">page4(未実装)</a></li>
+                <li class="side-menu-list"><h4 class="side-menu-title">App_List</h4></li>
+                <li class="side-menu-item"><a href="{{ secure_asset('http://meet-one-hal.herokuapp.com/') }}" class="side-menu-link" target="_blank">MEET-ONE.</a></li>
+                <li class="side-menu-item"><a href="" class="side-menu-link" target="_blank">application2(未実装)</a></li>
+                <li class="side-menu-item"><a href="" class="side-menu-link" target="_blank">application3(未実装)</a></li>
+                <li class="side-menu-item"><a href="" class="side-menu-link" target="_blank">application4(未実装)</a></li>
+                <li class="side-menu-list"><h4 class="side-menu-title">More_About...</h4></li>
+                <li class="side-menu-item"><a href="" class="side-menu-link">information(未実装)</a></li>
             </ul>
         </div>
         <div class="image-gallery-container animated fadeInUp">

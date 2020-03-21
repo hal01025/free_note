@@ -111,16 +111,16 @@
 
 .side-menu-title {
     color: white;
-    margin: 50px 20px 30px 20px;
+    margin: 50px 20px 10px 20px;
 }
 
 .side-menu-list {
-    line-height: 75px;
+    line-height: 30px;
 }
 
 .side-menu-link {
     color: white;
-    padding: 0 30px;
+    padding: 0 35px;
 }
 
 .side-menu-link:hover {
