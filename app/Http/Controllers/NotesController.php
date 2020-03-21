@@ -290,6 +290,32 @@ class NotesController extends Controller
         
         $note->save();
         
-        return redirect('my-page');
+        $genre = Genre::find($note->genre()->first()->id);
+        $belonging_notes = $genre->belonging_notes();
+        $notes = $belonging_notes->where('user_id', \Auth::id())->orderBy('id', 'desc')->paginate(5);
+        
+        $my_notes = \Auth::user()->notes()->get();
+        $num = 0;
+        $photo_array = [];
+        
+        foreach($my_notes as $note) 
+        {
+            $photos = $note->photos()->get();
+            
+            foreach($photos as $key=>$photo) 
+            {
+                $num += 1;
+                $photo_url = $photo->photos_url;
+                $photo_array[$num] = $photo_url;
+            }
+        }
+        
+        if($photo_array) 
+        {
+        krsort($photo_array);
+        $photo_array = array_slice($photo_array, 0, 25);
+        }
+        
+        return view('notes.list', ['notes' => $notes, 'genre' => $genre, 'photos' => $photo_array]);
     }
 }
