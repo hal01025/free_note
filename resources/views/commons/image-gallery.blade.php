@@ -17,10 +17,10 @@
                 <li class="side-menu-list"><h4 class="side-menu-title">・Portfolio</h4></li>
                 <li class="side-menu-item"><a href="" class="side-menu-link">my_portfolio(未実装)</a></li>
                 <li class="side-menu-list"><h4 class="side-menu-title">・LP_Reproduction</h4></li>
-                <li class="side-menu-item"><a href="" class="side-menu-link">page1(未実装)</a></li>
-                <li class="side-menu-item"><a href="" class="side-menu-link">page2(未実装)</a></li>
-                <li class="side-menu-item"><a href="" class="side-menu-link">page3(未実装)</a></li>
-                <li class="side-menu-item"><a href="" class="side-menu-link">page4(未実装)</a></li>
+                <li class="side-menu-item"><a href="" class="side-menu-link" target="_blank">page1(未実装)</a></li>
+                <li class="side-menu-item"><a href="" class="side-menu-link" target="_blank">page2(未実装)</a></li>
+                <li class="side-menu-item"><a href="" class="side-menu-link" target="_blank">page3(未実装)</a></li>
+                <li class="side-menu-item"><a href="" class="side-menu-link" target="_blank">page4(未実装)</a></li>
                 <li class="side-menu-list"><h4 class="side-menu-title">・App_List</h4></li>
                 <li class="side-menu-item"><a href="{{ secure_asset('http://meet-one-hal.herokuapp.com/') }}" class="side-menu-link" target="_blank">MEET-ONE.</a></li>
                 <li class="side-menu-item"><a href="" class="side-menu-link" target="_blank">application2(未実装)</a></li>
