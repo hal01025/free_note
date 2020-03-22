@@ -105,13 +105,22 @@
     left: -300px;
 }
 
+.side-menu-header {
+    margin: 60px 20px 50px 20px;
+    color: white;
+    letter-spacing: 3px;
+}
+
 .side-menu-list {
     color: white;
 }
 
 .side-menu-title {
     color: white;
-    margin: 50px 20px 10px 20px;
+    margin: 30px 40px 10px 40px;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 2px;
 }
 
 .side-menu-list {
@@ -120,7 +129,7 @@
 
 .side-menu-link {
     color: white;
-    padding: 0 35px;
+    padding: 0 55px;
 }
 
 .side-menu-link:hover {
