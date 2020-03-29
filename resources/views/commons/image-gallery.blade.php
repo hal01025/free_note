@@ -1,13 +1,13 @@
 <div class="top-image">
-    <div class="top-image-container">
-        <div class="background-title">
-            <img src="" class="black-board">
-        </div>
-    </div>
+    <div class="top-image-container"></div>
     <div class="image-gallery">
-        <div class="gallery-title">
-            <h2 class="photo-gallery-title"></h2>
-        </div>
+        @if(!count($photos))
+            <div class="gallery-title">
+                <h2>Let's Create New Note!</h2>
+                <p>your photos will be placed here</p>
+            </div>
+        @else
+        @endif
         <div class="gallery-btn">
             <p><i class="fas fa-arrows-alt-h"></i></p>
         </div>
@@ -24,8 +24,7 @@
                 <li class="side-menu-list"><h4 class="side-menu-title">・App_List</h4></li>
                 <li class="side-menu-item"><a href="{{ secure_asset('http://meet-one-hal.herokuapp.com/') }}" class="side-menu-link" target="_blank">MEET-ONE.</a></li>
                 <li class="side-menu-item"><a href="" class="side-menu-link" target="_blank">application2(未実装)</a></li>
-                <li class="side-menu-item"><a href="" class="side-menu-link" target="_blank">application3(未実装)</a></li>
-                <li class="side-menu-item"><a href="" class="side-menu-link" target="_blank">application4(未実装)</a></li>
+                <li class="side-menu-item"><a href="{{ secure_asset('http://microposts-hal.herokuapp.com/') }}" class="side-menu-link" target="_blank">Microposts (スクール課題)</a></li>
             </ul>
         </div>
         <div class="image-gallery-container animated fadeInUp">

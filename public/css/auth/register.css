@@ -1,5 +1,5 @@
 .register {
-    background-image: url(https://storage-hal2.s3-ap-northeast-1.amazonaws.com/photos/desk-3076954_1920.jpg);
+    background-image: url(https://storage-hal2.s3-ap-northeast-1.amazonaws.com/photos/laptop-3076957_1920.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -8,10 +8,28 @@
     padding: 20vw 0 10vw 0;
 }
 
+.register-wrapper {
+    padding: 25px 0 15px 0;
+    background-color: rgba(30,30,30,0.8);
+    border-radius: 3px;
+    border: 0.5px solid grey;
+    box-shadow: 0 0 5px black;
+}
+
 .register-wrapper h2 {
-    color: black;
+    color: white;
 }
 
 .register-wrapper label {
-    color: black;
+    color: white;
+}
+
+@media(max-width: 767px) {
+    .register {
+        background-image: url(https://storage-hal2.s3-ap-northeast-1.amazonaws.com/photos/laptop-3076957_1920_2.jpg);
+    }
+    
+    .register-container {
+        padding-top: 30vw;
+    }
 }

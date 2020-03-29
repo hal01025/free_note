@@ -1,3 +1,8 @@
+.top-image {
+    background-image: url(https://storage-hal2.s3-ap-northeast-1.amazonaws.com/photos/white-867992_1920.jpg);
+    background-size: cover;
+}
+
 .top-image-container {
     position: relative;
     width: 100vw;
@@ -5,39 +10,29 @@
     height: 50px;
 }
 
-.black-board {
-    position: absolute;
-    top: 280px;
-    width: 100vw;
-}
-
-.top-image {
-    background-image: url(https://storage-hal2.s3-ap-northeast-1.amazonaws.com/photos/white-867992_1920.jpg);
-    background-size: cover;
-}
-
-.background-title {
-}
-
 .image-gallery {
-    /*border-bottom: 3px solid rgb(111,73,23);*/
     height: 300px;
     position: relative;
     padding-top: 30px;
-    /*background-color: rgba(55,55,55,0.4);*/
 }
 
 .gallery-title {
     position: absolute;
     top: 10px;
-    left: 5vw;
 }
 
 .gallery-title h2 {
     opacity: 0.7;
-    font-size: 180px;
-    color: white;
-    width: 1200px;
+    font-size: 80px;
+    width: 100vw;
+    text-align: center;
+}
+
+.gallery-title p {
+    opacity: 0.7;
+    font-size: 30px;
+    width: 100vw;
+    text-align: center;
 }
 
 .gallery-btn {
