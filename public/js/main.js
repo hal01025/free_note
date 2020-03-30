@@ -4,7 +4,13 @@ const $menu_btn = $('.gallery-btn');
 let count = 0;
 
 $delete.on('click', () => {
-    confirm('削除しますか?');
+    var result = window.confirm('削除しますか?');
+    
+    if(result) {
+        $delete.parent().attr('onsubmit', 'return true');
+    } else {
+        $delete.parent().attr('onsubmit', 'return false');
+    }
 });
 
 $back.on('click', (e) => {

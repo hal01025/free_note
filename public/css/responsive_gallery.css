@@ -1,7 +1,7 @@
 .responsive-container {
     display: none;
     padding-top: 30px;
-    background-image: url(https://storage-hal2.s3-ap-northeast-1.amazonaws.com/photos/paper-1074131_1920.jpg);
+    background-image: url(https://storage-hal2.s3-ap-northeast-1.amazonaws.com/photos/wood-1759566_1920.jpg);
 }
 
 .responsive-gallery {
@@ -18,9 +18,9 @@
 }
 
 .responsive-photo-container {
-    width: 80vw;
-    height: 91vw;
-    margin-top: 5px;
+    width: 63vw;
+    height: 72vw;
+    margin-top: 10px;
 }
 
 @media(max-width: 767px) {

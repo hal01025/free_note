@@ -14,13 +14,13 @@
           <p class="article">Article: </br>{!! nl2br($note->article) !!}</p>
           <div class="row">
             @if(Auth::id() === $note->user_id)
-            <div class="col-sm-1">  
+            <div class="col-md-1">  
               <a href="{{ route('notes.edit', $note->id)}}" class="btn btn-secondary btn-sm mt-3">Edit</a>
             </div>
-            <div class="col-sm-1">
+            <div class="col-md-1 share_protect">
               @include('commons.share_button')
             </div>
-            <div class="col-sm-1 offset-sm-8">
+            <div class="col-md-1 offset-md-8 delete-button">
               {!! Form::open(['route' => ['notes.destroy', $note->id], 'method' => 'delete']) !!}
                   {!! Form::submit('Delete', ['class' => 'btn btn-danger btn-sm mt-3 delete-btn']) !!}
               {!! Form::close() !!}

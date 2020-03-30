@@ -1,3 +1,24 @@
 .note-wrapper p {
     word-wrap: break-word;
 }
+
+@media(max-width: 1000px) {
+    .delete-button {
+        padding: 0;
+    }
+    
+    .share_protect {
+        margin-left: 10px;
+    }
+}
+
+@media(max-width: 767px) {
+    .delete-button {
+        padding: 0 15px;
+    }
+    
+    .share_protect {
+        margin: 0;
+        padding: 0 15px;
+    }
+}

@@ -122,24 +122,6 @@ class NotesController extends Controller
         
         $notes = \Auth::user()->notes()->get();
         
-        foreach($notes as $note) 
-        {
-            $photos = $note->photos()->get();
-            
-            foreach($photos as $key=>$photo) 
-            {
-                $num += 1;
-                $photo_url = $photo->photos_url;
-                $photo_array[$num] = $photo_url;
-            }
-        }
-        
-        if($photo_array) 
-        {
-        krsort($photo_array);
-        $photo_array = array_slice($photo_array, 0, 25);
-        }
-        
         return view('notes.create', ['id' => $id, 'genre' => $genre, 'photos' => $photo_array]);
     }
     

@@ -13,13 +13,14 @@ const $note = $('.note');
 
 $red.on('click', () => {
     $tag.css({
-        'z-index': 10,
+        'z-index': 0,
+    });
+    $green.css({
+        'z-index': 0,
     });
     $note.hide();
     $red_note.show();
-    $red_note.css({
-        'z-index': 50,
-    });
+    
     $red.css({
         'z-index': 100,
     });
@@ -27,13 +28,11 @@ $red.on('click', () => {
 
 $green.on('click', () => {
     $tag.css({
-        'z-index': 10,
+        'z-index': 0,
     });
     $note.hide();
     $green_note.show();
-    $green_note.css({
-        'z-index': 50,
-    });
+    
     $green.css({
         'z-index': 100,
     });
@@ -41,13 +40,11 @@ $green.on('click', () => {
 
 $blue.on('click', () => {
     $tag.css({
-        'z-index': 10,
+        'z-index': 0,
     });
     $note.hide();
     $blue_note.show();
-    $blue_note.css({
-        'z-index': 50,
-    });
+    
     $blue.css({
         'z-index': 100,
     });
@@ -55,13 +52,11 @@ $blue.on('click', () => {
 
 $yellow.on('click', () => {
     $tag.css({
-        'z-index': 10,
+        'z-index': 0,
     });
     $note.hide();
     $yellow_note.show();
-    $yellow_note.css({
-        'z-index': 50,
-    });
+    
     $yellow.css({
         'z-index': 100,
     });
